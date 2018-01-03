@@ -16,4 +16,4 @@ with open(r'C:\Windows\System32\drivers\etc\hosts', 'w') as hosts_file:
     hosts_file.write(hosts_content)
 
 # 刷新dns
-os.system(r'ipconfig/flushdns')
+print(os.popen(r'ipconfig/flushdns').read())
